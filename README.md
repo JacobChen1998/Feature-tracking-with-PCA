@@ -21,4 +21,4 @@ We use Sum of Squares of Residuals (SSR) as the metric.
 ![Org_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/origin.gif)
 ![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/demo.gif)
   
-Reference frame                 Tracked frames                 Tracking result
+Reference frame         /        Tracked frames      /           Tracking result
