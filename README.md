@@ -9,7 +9,7 @@ Therefore, each block will be extracted into 128 features.
 
 The keypoint desired to track is selected in the reference frame. 
 The width and height of target are also adjustable.
-By <poses> we can match which the feature set is the reference feature set.
+By "poses" we can match which the feature set is the reference feature set.
 
 Similarly, block cutting is performed on the tracked frame.
 Then use the trained PCA model to perform feature extraction on all blocks, so we can get a features set of each block.
