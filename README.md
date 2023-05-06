@@ -29,12 +29,12 @@ Working pipeline:
 
 #### 1. Environment create
 ```
-    conda create --name django-stream python=3.8
+    conda create --name pcatrack python=3.8
 ```
 
 #### 2. Environment activate
 ```
-    conda activate django-stream
+    conda activate pcatrack
 ```
 
 #### 3. Packages install
