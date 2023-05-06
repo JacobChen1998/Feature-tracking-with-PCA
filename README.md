@@ -28,4 +28,4 @@ Reference frame         /        Tracked frames      /           Tracking result
 
 Working pipeline:
 
-![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/flowchart.png)
+![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/demo/flowchart.png)
