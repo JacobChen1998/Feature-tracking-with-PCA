@@ -20,7 +20,7 @@ We use Sum of Squares of Residuals (SSR) as the metric.
 
 Working pipeline:
 
-![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/flowchart.png)
+![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/demo/flowchart.png)
   
  ## Prerequisites 
 - Python > 3.6
@@ -61,13 +61,13 @@ featureNum = 128 # mapping feature num
 
 ### car tracking
  
-![Ref_frame](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/reference_frame.png)
-![Org_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/origin.gif)
-![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/demo.gif)
+![Ref_frame](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/demo/reference_frame.png)
+![Org_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/demo/origin.gif)
+![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/demo/demo.gif)
   
 Reference frame         /        Tracked frames      /           Tracking result
 
 ### person tracking
 
-![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/demo/flowchart.png)
+![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/demo/demo/demo_person.png)
 
