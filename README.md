@@ -1,3 +1,4 @@
+
 # Algorithm Description
 Traditional feature tracking techniques such as SIFT, SURF, and Lucas Kanade algorithms define key points in terms of finding poles and cannot specify specific tracking points. The general Deep Learning based tracking algorithms such as Siamese tracker require a lot of resources for neural network training. Here, we implement feature tracking using PCA. Our algorithm can specify tracking points and does not require extensive training.
 
@@ -16,6 +17,8 @@ Then use the trained PCA model to perform feature extraction on all blocks, so w
   
 The ideal feature set of the tracking point will theoretically have minimum error value with features set of reference keypoint. 
 We use Sum of Squares of Residuals (SSR) as the metric.
+
+Working pipeline:
 
 ![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/flowchart.png)
   
@@ -39,22 +42,32 @@ We use Sum of Squares of Residuals (SSR) as the metric.
     pip install -r requirements.txt
 ```
 
-#### 4. Replace playing source in [cfg.py](https://github.com/JacobChen1998/Streaming-with-Django-and-OpenCV/blob/main/cfg.py)
+#### 4. Adjust cfg.py file
 ```
-   stream_link =  <your source>
+Tracked_based_on_last = True # if False, tracked based on first frame
+NORMALIZATION = True # Img Crop Normalization before PCA fit/transform
+focus_region = True # Focus tracking on specific region
+source = "samples/ntu_sample.avi" # video source
+RizeRatio = 5 # lower resolution tracking avoid memory insufficient
+featureNum = 128 # mapping feature num
 ```
 
-#### 5. Run the server
+#### 5. Run code
 ```
-   python manage.py runserver
+   python ObjTrack_PCA.py
 ```
 
+## Some demo
+
+### car tracking
+ 
 ![Ref_frame](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/reference_frame.png)
 ![Org_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/origin.gif)
 ![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/demo.gif)
   
 Reference frame         /        Tracked frames      /           Tracking result
 
-Working pipeline:
+### person tracking
 
+![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/demo/flowchart.png)
 
