@@ -69,5 +69,5 @@ Reference frame         /        Tracked frames      /           Tracking result
 
 ### person tracking
 
-![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/demo/demo/demo_person.gif)
+![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/demo/demo_person.gif)
 
