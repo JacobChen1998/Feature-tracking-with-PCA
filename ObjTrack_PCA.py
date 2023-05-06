@@ -1,16 +1,10 @@
-Tracked_based_on_last = True # 是否根據上一frame來追蹤? (True) 還是根據第一frame (False)
-NORMALIZATION = True
-focus_region = True
-source = "samples/ntu_sample.avi"
-# source = "samples/03555114_20221128_Hand_L_L.mp4FT.SVFI_Render.239fps.SR=realesr-animevideov3-x2_884983.mp4"
-RizeRatio = 5 #5
 import cv2
 import numpy as np
 import time 
 import os
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
-# import cupy as cp
+from cfg import *
 import imageio
 symbo = "-"
 
@@ -46,7 +40,8 @@ xFOCUS,yFOCUS,wFOCUS,hFOCUS = None,None,None,None
 
 if not os.path.exists("results"):
         os.mkdir("results")
-        
+
+
 while True:
         ret, frame = cap.read()
         if not ret:
@@ -61,7 +56,6 @@ while True:
         if RizeRatio!=1:
                 frameH,frameW, _ = frame.shape
         if count == 0:
-
                 x,y,w,h = roi_choose(frame,ratioZoom=0.5)
                 x1,y1,x2,y2  = x,y,x+w,y+h
                 x1_org,y1_org,x2_org,y2_org = x1,y1,x2,y2
@@ -79,7 +73,7 @@ while True:
                 print("\n\nrois shape : ", rois.shape)
                 print(rois.shape,rois.reshape(rois.shape[0],-1).shape)
                 t1PCA = time.time()
-                pca = PCA(n_components=128)
+                pca = PCA(n_components=featureNum)
                 print(f"{symbo*80}")
                 print("\n\n[PCA fitting]")
                 reference_frame_features = pca.fit_transform(rois)

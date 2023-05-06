@@ -1,4 +1,4 @@
-# Feature-tracking-with-PCA
+# Algorithm Description
 Traditional feature tracking techniques such as SIFT, SURF, and Lucas Kanade algorithms define key points in terms of finding poles and cannot specify specific tracking points. The general Deep Learning based tracking algorithms such as Siamese tracker require a lot of resources for neural network training. Here, we implement feature tracking using PCA. Our algorithm can specify tracking points and does not require extensive training.
 
 The algorithm of SIFT is to find several poles and then extract the n x n interval centered on each poles into 128 feature values.
@@ -16,7 +16,39 @@ Then use the trained PCA model to perform feature extraction on all blocks, so w
   
 The ideal feature set of the tracking point will theoretically have minimum error value with features set of reference keypoint. 
 We use Sum of Squares of Residuals (SSR) as the metric.
+
+![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/flowchart.png)
   
+ ## Prerequisites 
+- Python > 3.6
+
+## Quick start with anaconda 
+
+#### 1. Environment create
+```
+    conda create --name django-stream python=3.8
+```
+
+#### 2. Environment activate
+```
+    conda activate django-stream
+```
+
+#### 3. Packages install
+```
+    pip install -r requirements.txt
+```
+
+#### 4. Replace playing source in [cfg.py](https://github.com/JacobChen1998/Streaming-with-Django-and-OpenCV/blob/main/cfg.py)
+```
+   stream_link =  <your source>
+```
+
+#### 5. Run the server
+```
+   python manage.py runserver
+```
+
 ![Ref_frame](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/reference_frame.png)
 ![Org_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/origin.gif)
 ![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/demo.gif)
@@ -25,4 +57,4 @@ Reference frame         /        Tracked frames      /           Tracking result
 
 Working pipeline:
 
-![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/flowchart.png)
+
