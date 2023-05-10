@@ -18,6 +18,8 @@ Then use the trained PCA model to perform feature extraction on all blocks, so w
 The ideal feature set of the tracking point will theoretically have minimum error value with features set of reference keypoint. 
 We use Sum of Squares of Residuals (SSR) as the metric.
 
+YouTube demo the full tracking process : https://www.youtube.com/watch?v=AgQnKrLrjUM
+
 Working pipeline:
 
 ![Demo_frames](https://github.com/JacobChen1998/Feature-tracking-with-PCA/blob/main/demo/flowchart.png)
